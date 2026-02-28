@@ -14,7 +14,6 @@ struct Config {
     std::string routingengine_server;
     std::string engine;
     std::string aggregate_type;
-    std::string place;
 
     static Config load(const std::string& path) {
         // Parse key=value file
@@ -42,7 +41,6 @@ struct Config {
         c.routingengine_server = get(kv, "routingengine_server");
         c.engine               = get(kv, "engine");
         c.aggregate_type       = get(kv, "aggregate_type");
-        c.place                = get(kv, "place");
         return c;
     }
 
