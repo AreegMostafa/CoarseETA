@@ -130,7 +130,7 @@ double CoarseETA::ETARequest(ETAQuery query, Timing& timing) {
         // calculate total time
         timing.total = std::chrono::duration<double, std::milli>(total_time_end - total_time_start).count();
         // get CoarseETA's overhead
-        timing.coarse_eta = timing.total - timing.routing_engine;
+        timing.coarseETA = timing.total - timing.routing_engine;
 
         // return result
         return final_eta;
